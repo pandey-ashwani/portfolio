@@ -1,6 +1,6 @@
 /* ==========================================================================
    DEVELOPER PORTFOLIO STYLESHEET
-   Author: Siddharth Pathak
+   Author: Ashwani Pandey
    Theme: Modern Premium Dark/Light UI
    ========================================================================== */
 
@@ -1677,14 +1677,19 @@ html[data-theme="light"] .dark-icon {
     .hero-title {
         font-size: 3rem;
     }
+    
+    .nav-menu {
+        gap: 16px;
+    }
 }
 
-/* Tablet & Mobile Menu Breakpoint (992px) */
-@media (max-width: 992px) {
-    /* Responsive Grids */
-    .grid-2 {
-        grid-template-columns: 1fr;
-        gap: 40px;
+@media (max-width: 900px) {
+    .nav-menu {
+        gap: 10px;
+    }
+    
+    .nav-link {
+        font-size: 0.85rem;
     }
     
     .grid-3 {
@@ -1695,6 +1700,15 @@ html[data-theme="light"] .dark-icon {
     .grid-4 {
         grid-template-columns: repeat(2, 1fr);
         gap: 20px;
+    }
+}
+
+/* Tablet & Mobile Menu Breakpoint (800px) */
+@media (max-width: 800px) {
+    /* Responsive Grids */
+    .grid-2 {
+        grid-template-columns: 1fr;
+        gap: 40px;
     }
     
     .section-padding {
