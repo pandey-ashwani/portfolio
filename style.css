@@ -736,7 +736,7 @@ html[data-theme="light"] .dark-icon {
    -------------------------------------------------------------------------- */
 .skills-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
     gap: 32px;
 }
 
@@ -844,7 +844,7 @@ html[data-theme="light"] .dark-icon {
 
 .projects-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 300px), 1fr));
     gap: 32px;
 }
 
@@ -981,6 +981,7 @@ html[data-theme="light"] .dark-icon {
 
 .project-card-footer {
     display: flex;
+    flex-wrap: wrap;
     gap: 12px;
     border-top: 1px solid var(--border-color);
     padding-top: 16px;
@@ -1670,7 +1671,7 @@ html[data-theme="light"] .dark-icon {
 
 @media (max-width: 1024px) {
     .grid-2, .grid-3 {
-        gap: 28px;
+        gap: 24px;
     }
     
     .hero-title {
@@ -1678,20 +1679,22 @@ html[data-theme="light"] .dark-icon {
     }
 }
 
-@media (max-width: 900px) {
+/* Tablet & Mobile Menu Breakpoint (992px) */
+@media (max-width: 992px) {
+    /* Responsive Grids */
+    .grid-2 {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+    
     .grid-3 {
         grid-template-columns: repeat(2, 1fr);
+        gap: 24px;
     }
     
     .grid-4 {
         grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-@media (max-width: 768px) {
-    .grid-2 {
-        grid-template-columns: 1fr;
-        gap: 40px;
+        gap: 20px;
     }
     
     .section-padding {
@@ -1759,6 +1762,8 @@ html[data-theme="light"] .dark-icon {
     
     .hero-subtitle {
         font-size: 1.3rem;
+        height: auto;
+        min-height: 40px;
     }
     
     .hero-description {
@@ -1814,6 +1819,7 @@ html[data-theme="light"] .dark-icon {
     }
 }
 
+/* Mobile Screens (580px) */
 @media (max-width: 580px) {
     .grid-3, .grid-4 {
         grid-template-columns: 1fr;
@@ -1824,6 +1830,10 @@ html[data-theme="light"] .dark-icon {
     }
     
     .projects-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .skills-grid {
         grid-template-columns: 1fr;
     }
     
